@@ -7,7 +7,7 @@ myNumbers = [
 ]
 
 
-// the function oneTowThree should be determining if a string is a valid number
+// the function oneTwoThree should be determining if a string is a valid number
 // 1. has exactly 1 of each 1,2,3
 // 2. and that 1,2,3 appear in the right order (1 before 2 before 3)
 // the given example should only have the first and last as true
@@ -72,7 +72,7 @@ function oneTwoThree(numbers){
     return result;
 }
 
-// do not modify the bellow code
+// do not modify the below code
 
 showNumbersResults(myNumbers,oneTwoThree(myNumbers));
 

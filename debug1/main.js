@@ -43,7 +43,7 @@ function checkGrid(grid){
     
 }
 
-// Do not change any of the bellow code
+// Do not change any of the below code
 // feel free to investigate it
 
 showGridResults(myGrid,checkGrid(myGrid));
