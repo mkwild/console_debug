@@ -15,7 +15,7 @@ myNumbers = [
 // something is clearly wrong
 function oneTwoThree(numbers){
 
-    let result = new Array(myNumbers.length).fill(true)
+    let result = []
 
     for (let numberIndex = 0; numberIndex < numbers.length; numberIndex += 1){
         
@@ -29,30 +29,30 @@ function oneTwoThree(numbers){
         
         for (let index = 0; index < numberString.length; index += 1){
             let char = numberString[index];
-            if (char === 1){
+            if (char === "1"){
                 numberCounts[1] += 1
             }
-            if (char === 2){
+            if (char === "2"){
                 numberCounts[2] += 1
             }
-            if (char === 3){
+            if (char === "3"){
                 numberCounts[3] += 1
             }
         }
 
         if (numberCounts[1] === 1 && numberCounts[2] === 1 && numberCounts[3] === 1){
-            validNumber = false;
-        } else {
             validNumber = true;
+        } else {
+            validNumber = false;
         }
 
         if (validNumber === true){
 
-            let oneLocation = numberString.indexOf(1);
-            let twoLocation = numberString.indexOf(2);
-            let threeLocation = numberString.indexOf(3);
+            let oneLocation = numberString.indexOf("1");
+            let twoLocation = numberString.indexOf("2");
+            let threeLocation = numberString.indexOf("3");
 
-            if (oneLocation < twoLocation && oneLocation < threeLocation && twoLocation < threeLocation){
+            if (oneLocation < twoLocation && twoLocation < threeLocation){
                 validNumber = true
             } else {
                 validNumber = false
@@ -60,11 +60,7 @@ function oneTwoThree(numbers){
 
         }
 
-        if (validNumber === true){
-            true;
-        } else {
-            false;
-        }
+        result.push(validNumber)
 
         
     }
